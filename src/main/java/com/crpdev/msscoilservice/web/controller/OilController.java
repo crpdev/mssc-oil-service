@@ -68,7 +68,7 @@ public class OilController {
         return new ResponseEntity<>(oilService.getOilByBarCode(barCode, showInventoryOnHand), HttpStatus.OK);
     }
 
-    @PostMapping
+    @PostMapping("oil")
     public ResponseEntity saveNewOil(@RequestBody @Validated  OilDto oilDto){
         return new ResponseEntity(oilService.saveNewOil(oilDto), HttpStatus.CREATED);
     }
