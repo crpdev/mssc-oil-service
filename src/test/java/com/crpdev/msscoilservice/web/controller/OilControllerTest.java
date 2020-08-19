@@ -34,7 +34,7 @@ class OilControllerTest {
 
     @Test
     void getOilById() throws Exception {
-        given(oilService.getOilById(any())).willReturn(getValidOilDto());
+        given(oilService.getOilById(any(), true)).willReturn(getValidOilDto());
         mockMvc.perform(get("/api/v1/oil/" + UUID.randomUUID().toString()).accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
     }
