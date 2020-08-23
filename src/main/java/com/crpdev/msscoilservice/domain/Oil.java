@@ -40,7 +40,7 @@ public class Oil {
     private String oilType;
 
     @Column(unique = true)
-    private String barCode;
+    private String productCode;
 
     private BigDecimal price;
     private Integer minOnHand;

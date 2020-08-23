@@ -5,7 +5,6 @@ import com.crpdev.msscoilservice.service.OilService;
 import com.crpdev.msscoilservice.web.model.OilDto;
 import com.crpdev.msscoilservice.web.model.OilType;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -17,7 +16,6 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -72,7 +70,7 @@ class OilControllerTest {
         return OilDto.builder()
                 .oilName("Gold Winner")
                 .oilType(OilType.COCUNUT)
-                .barCode(OilLoader.OIL_BARCODE_1)
+                .productCode(OilLoader.OIL_PRODUCTCODE_1)
                 .price(new BigDecimal("100"))
                 .quantityOnHand(200)
                 .build();

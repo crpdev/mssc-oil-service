@@ -4,7 +4,6 @@ import com.crpdev.msscoilservice.domain.Oil;
 import com.crpdev.msscoilservice.repository.OilRepository;
 import com.crpdev.msscoilservice.web.model.OilType;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.UUID;
@@ -12,9 +11,9 @@ import java.util.UUID;
 //@Component
 public class OilLoader implements CommandLineRunner {
 
-    public static final String OIL_BARCODE_1 = "8005235079489";
-    public static final String OIL_BARCODE_2 = "4987176014894";
-    public static final String OIL_BARCODE_3 = "4987176014893";
+    public static final String OIL_PRODUCTCODE_1 = "8005235079489";
+    public static final String OIL_PRODUCTCODE_2 = "4987176014894";
+    public static final String OIL_PRODUCTCODE_3 = "4987176014893";
     public static final UUID OIL_1_UUID = UUID.fromString("0a818933-087d-47f2-ad83-2f986ed087eb");
     public static final UUID OIL_2_UUID = UUID.fromString("a712d914-61ea-4623-8bd0-32c0f6545bfd");
     public static final UUID OIL_3_UUID = UUID.fromString("026cc3c8-3a0c-4083-a05b-e908048c1b08");
@@ -36,7 +35,7 @@ public class OilLoader implements CommandLineRunner {
             oilRepository.save(Oil.builder()
             .oilName("Gold Winner")
             .oilType(OilType.COCUNUT.name())
-            .barCode(OIL_BARCODE_1)
+            .productCode(OIL_PRODUCTCODE_1)
             .price(new BigDecimal("100"))
             .minOnHand(10)
             .quantityToGrind(100)
@@ -45,7 +44,7 @@ public class OilLoader implements CommandLineRunner {
             oilRepository.save(Oil.builder()
                     .oilName("Fortune")
                     .oilType(OilType.GINGELY.name())
-                    .barCode(OIL_BARCODE_2)
+                    .productCode(OIL_PRODUCTCODE_2)
                     .price(new BigDecimal("150"))
                     .minOnHand(5)
                     .quantityToGrind(200)
@@ -54,7 +53,7 @@ public class OilLoader implements CommandLineRunner {
             oilRepository.save(Oil.builder()
                     .oilName("Thangam")
                     .oilType(OilType.GROUND_NUT.name())
-                    .barCode(OIL_BARCODE_3)
+                    .productCode(OIL_PRODUCTCODE_3)
                     .price(new BigDecimal("250"))
                     .minOnHand(20)
                     .quantityToGrind(5)

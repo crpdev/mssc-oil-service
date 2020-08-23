@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.UUID;
 
 @RequiredArgsConstructor
@@ -58,14 +57,14 @@ public class OilController {
         return new ResponseEntity<>(oilService.getOilById(oilId, showInventoryOnHand), HttpStatus.OK);
     }
 
-    @GetMapping("oil/barCode/{barCode}")
-    public ResponseEntity<OilDto> getOilByBarCode(@PathVariable("barCode") String barCode,
+    @GetMapping("oil/barCode/{productCode}")
+    public ResponseEntity<OilDto> getOilByBarCode(@PathVariable("productCode") String productCode,
                                              @RequestParam(value = "showInventoryOnHand", required = false) Boolean showInventoryOnHand) {
         if (showInventoryOnHand == null){
             showInventoryOnHand = false;
         }
 
-        return new ResponseEntity<>(oilService.getOilByBarCode(barCode, showInventoryOnHand), HttpStatus.OK);
+        return new ResponseEntity<>(oilService.getOilByProductCode(productCode, showInventoryOnHand), HttpStatus.OK);
     }
 
     @PostMapping("oil")

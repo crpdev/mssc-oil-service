@@ -15,8 +15,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -40,15 +38,15 @@ public class OilServiceImpl implements OilService {
         }
     }
 
-    @Cacheable(cacheNames = "oilBarCodeCache", key = "#barCode", condition = "#showInventoryOnHand == false")
+    @Cacheable(cacheNames = "oilBarCodeCache", key = "#productCode", condition = "#showInventoryOnHand == false")
     @Override
-    public OilDto getOilByBarCode(String barCode, Boolean showInventoryOnHand) {
+    public OilDto getOilByProductCode(String productCode, Boolean showInventoryOnHand) {
 
-        log.debug("<<< getOilByBarCode was called >>>");
+        log.debug("<<< getOilByProductCode was called >>>");
         if(showInventoryOnHand){
-            return oilMapper.oilToOilDtoWithInventory(oilRepository.findByBarCode(barCode));
+            return oilMapper.oilToOilDtoWithInventory(oilRepository.findByProductCode(productCode));
         } else {
-            return oilMapper.oilToOilDto(oilRepository.findByBarCode(barCode));
+            return oilMapper.oilToOilDto(oilRepository.findByProductCode(productCode));
         }
     }
 
@@ -65,7 +63,7 @@ public class OilServiceImpl implements OilService {
         oil.setOilName(oilDto.getOilName());
         oil.setOilType(oilDto.getOilType().name());
         oil.setPrice(oilDto.getPrice());
-        oil.setBarCode(oilDto.getBarCode());
+        oil.setProductCode(oilDto.getProductCode());
         return oilMapper.oilToOilDto(oilRepository.save(oil));
     }
 
