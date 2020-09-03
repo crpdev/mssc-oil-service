@@ -1,4 +1,4 @@
-package com.crpdev.msscoilservice.web.model;
+package com.crpdev.factory.oil.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

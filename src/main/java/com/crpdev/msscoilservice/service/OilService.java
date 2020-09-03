@@ -1,8 +1,8 @@
 package com.crpdev.msscoilservice.service;
 
-import com.crpdev.msscoilservice.web.model.OilDto;
-import com.crpdev.msscoilservice.web.model.OilPagedList;
-import com.crpdev.msscoilservice.web.model.OilType;
+import com.crpdev.factory.oil.model.OilDto;
+import com.crpdev.factory.oil.model.OilPagedList;
+import com.crpdev.factory.oil.model.OilType;
 import org.springframework.data.domain.PageRequest;
 
 import java.util.UUID;

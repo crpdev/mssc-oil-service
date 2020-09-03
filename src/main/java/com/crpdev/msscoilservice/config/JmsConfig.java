@@ -21,6 +21,8 @@ public class JmsConfig {
 
     public static final String GRINDING_REQUEST_QUEUE = "grinding-request";
     public static final String NEW_INVENTORY_QUEUE = "new-inventory";
+    public static final String VALIDATE_ORDER_QUEUE = "validate-order";
+    public static final String VALIDATE_RESPONSE_QUEUE = "validate-order-result";
 
     private final ObjectMapper objectMapper;
 

@@ -1,7 +1,7 @@
 package com.crpdev.msscoilservice.web.mapper;
 
+import com.crpdev.factory.oil.model.OilDto;
 import com.crpdev.msscoilservice.domain.Oil;
-import com.crpdev.msscoilservice.web.model.OilDto;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 

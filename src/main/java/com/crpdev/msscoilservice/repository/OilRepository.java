@@ -1,7 +1,7 @@
 package com.crpdev.msscoilservice.repository;
 
+import com.crpdev.factory.oil.model.OilType;
 import com.crpdev.msscoilservice.domain.Oil;
-import com.crpdev.msscoilservice.web.model.OilType;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,9 +1,9 @@
 package com.crpdev.msscoilservice.web.controller;
 
+import com.crpdev.factory.oil.model.OilDto;
+import com.crpdev.factory.oil.model.OilType;
 import com.crpdev.msscoilservice.bootstrap.OilLoader;
 import com.crpdev.msscoilservice.service.OilService;
-import com.crpdev.msscoilservice.web.model.OilDto;
-import com.crpdev.msscoilservice.web.model.OilType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,12 +1,12 @@
 package com.crpdev.msscoilservice.service;
 
+import com.crpdev.factory.oil.model.OilDto;
+import com.crpdev.factory.oil.model.OilPagedList;
+import com.crpdev.factory.oil.model.OilType;
 import com.crpdev.msscoilservice.domain.Oil;
 import com.crpdev.msscoilservice.repository.OilRepository;
 import com.crpdev.msscoilservice.web.controller.NotFoundException;
 import com.crpdev.msscoilservice.web.mapper.OilMapper;
-import com.crpdev.msscoilservice.web.model.OilDto;
-import com.crpdev.msscoilservice.web.model.OilPagedList;
-import com.crpdev.msscoilservice.web.model.OilType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.Cacheable;

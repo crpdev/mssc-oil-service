@@ -1,8 +1,8 @@
 package com.crpdev.msscoilservice.bootstrap;
 
+import com.crpdev.factory.oil.model.OilType;
 import com.crpdev.msscoilservice.domain.Oil;
 import com.crpdev.msscoilservice.repository.OilRepository;
-import com.crpdev.msscoilservice.web.model.OilType;
 import org.springframework.boot.CommandLineRunner;
 
 import java.math.BigDecimal;

@@ -1,11 +1,11 @@
 package com.crpdev.msscoilservice.service.grinding;
 
-import com.crpdev.common.events.GrindOilEvent;
-import com.crpdev.common.events.NewInventoryEvent;
+import com.crpdev.factory.oil.model.OilDto;
+import com.crpdev.factory.oil.model.events.GrindOilEvent;
+import com.crpdev.factory.oil.model.events.NewInventoryEvent;
 import com.crpdev.msscoilservice.config.JmsConfig;
 import com.crpdev.msscoilservice.domain.Oil;
 import com.crpdev.msscoilservice.repository.OilRepository;
-import com.crpdev.msscoilservice.web.model.OilDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;

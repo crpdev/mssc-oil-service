@@ -1,6 +1,6 @@
 package com.crpdev.msscoilservice.service.grinding;
 
-import com.crpdev.common.events.GrindOilEvent;
+import com.crpdev.factory.oil.model.events.GrindOilEvent;
 import com.crpdev.msscoilservice.config.JmsConfig;
 import com.crpdev.msscoilservice.domain.Oil;
 import com.crpdev.msscoilservice.repository.OilRepository;
