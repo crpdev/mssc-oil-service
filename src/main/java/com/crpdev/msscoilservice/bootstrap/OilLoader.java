@@ -4,11 +4,12 @@ import com.crpdev.factory.oil.model.OilType;
 import com.crpdev.msscoilservice.domain.Oil;
 import com.crpdev.msscoilservice.repository.OilRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
-//@Component
+@Component
 public class OilLoader implements CommandLineRunner {
 
     public static final String OIL_PRODUCTCODE_1 = "8005235079489";

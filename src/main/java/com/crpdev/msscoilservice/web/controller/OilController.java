@@ -57,8 +57,8 @@ public class OilController {
         return new ResponseEntity<>(oilService.getOilById(oilId, showInventoryOnHand), HttpStatus.OK);
     }
 
-    @GetMapping("oil/barCode/{productCode}")
-    public ResponseEntity<OilDto> getOilByBarCode(@PathVariable("productCode") String productCode,
+    @GetMapping("oil/productCode/{productCode}")
+    public ResponseEntity<OilDto> getOilByProductCode(@PathVariable("productCode") String productCode,
                                              @RequestParam(value = "showInventoryOnHand", required = false) Boolean showInventoryOnHand) {
         if (showInventoryOnHand == null){
             showInventoryOnHand = false;
