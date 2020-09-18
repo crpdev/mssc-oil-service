@@ -2,6 +2,7 @@ package com.crpdev.msscoilservice.service.inventory;
 
 import com.crpdev.msscoilservice.service.inventory.model.OilInventoryDto;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Profile;
@@ -17,7 +18,7 @@ import java.util.UUID;
 
 @Profile("!local-discovery")
 @Slf4j
-@ConfigurationProperties(prefix = "crp.factory", ignoreUnknownFields = false)
+@ConfigurationProperties(prefix = "crp.factory", ignoreUnknownFields = true)
 @Component
 public class OilInventoryServiceRestTemplate implements OilInventoryService {
 
@@ -26,8 +27,12 @@ public class OilInventoryServiceRestTemplate implements OilInventoryService {
 
     private String oilInventoryServiceHost;
 
-    public OilInventoryServiceRestTemplate(RestTemplateBuilder restTemplateBuilder) {
-        this.restTemplate = restTemplateBuilder.build();
+    public OilInventoryServiceRestTemplate(RestTemplateBuilder restTemplateBuilder,
+                                           @Value("${crp.factory.inventory-user}") String inventoryUser,
+                                           @Value("${crp.factory.inventory-password}")String inventoryPassword) {
+        this.restTemplate = restTemplateBuilder
+                .basicAuthentication(inventoryUser, inventoryPassword)
+                .build();
     }
 
     public void setOilInventoryServiceHost(String oilInventoryServiceHost){

@@ -1,5 +1,6 @@
 package com.crpdev.msscoilservice.service.inventory;
 
+import com.crpdev.msscoilservice.config.FeignClientConfig;
 import com.crpdev.msscoilservice.service.inventory.model.OilInventoryDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +17,7 @@ import java.util.UUID;
  * Project: mssc-oil-eureka
  * Package: com.crpdev.msscoilservice.service.inventory
  **/
-@FeignClient(name = "inventory-service", fallback = InventoryServiceFeignClientFailover.class)
+@FeignClient(name = "inventory-service", fallback = InventoryServiceFeignClientFailover.class, configuration = FeignClientConfig.class)
 public interface InventoryServiceFeignClient {
 
     @RequestMapping(method = RequestMethod.GET, value = OilInventoryServiceRestTemplate.INVENTORY_PATH)
