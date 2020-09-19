@@ -27,7 +27,7 @@ public class OilInventoryServiceFeign implements OilInventoryService {
 
     @Override
     public Integer getOnHandInventory(UUID oilId) {
-        log.debug("Calling Inventory Service for Oil Id: " + oilId);
+        log.debug("Calling Inventory Service via Feign for Oil Id: " + oilId);
 
         ResponseEntity<List<OilInventoryDto>> responseEntity = feignClient.getOnHandInventory(oilId);
 
