@@ -46,6 +46,8 @@ services:
       - config
     environment:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://crpdev:eurekapass@eureka:8761/eureka/
+      SPRING_PROFILES_ACTIVE: local-discovery
+      SPRING_ZIPKIN_BASEURL: http://zipkin
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
     restart: on-failure
   oil-service:
