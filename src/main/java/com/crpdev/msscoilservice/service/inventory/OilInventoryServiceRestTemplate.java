@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
-@Profile("!local-discovery")
+@Profile("!local-discovery & !digitalocean")
 @Slf4j
 @ConfigurationProperties(prefix = "crp.factory", ignoreUnknownFields = true)
 @Component
@@ -25,7 +25,7 @@ public class OilInventoryServiceRestTemplate implements OilInventoryService {
     public static final String INVENTORY_PATH = "/api/v1/oil/{oilId}/inventory";
     private final RestTemplate restTemplate;
 
-    private String oilInventoryServiceHost;
+    private String inventoryServiceHost;
 
     public OilInventoryServiceRestTemplate(RestTemplateBuilder restTemplateBuilder,
                                            @Value("${crp.factory.inventory-user}") String inventoryUser,
@@ -35,8 +35,8 @@ public class OilInventoryServiceRestTemplate implements OilInventoryService {
                 .build();
     }
 
-    public void setOilInventoryServiceHost(String oilInventoryServiceHost){
-        this.oilInventoryServiceHost = oilInventoryServiceHost;
+    public void setInventoryServiceHost(String inventoryServiceHost){
+        this.inventoryServiceHost = inventoryServiceHost;
     }
 
     @Override
@@ -44,7 +44,7 @@ public class OilInventoryServiceRestTemplate implements OilInventoryService {
         log.debug("<<< Calling Inventory Service >>>");
 
         ResponseEntity<List<OilInventoryDto>> responseEntity = restTemplate.exchange(
-                oilInventoryServiceHost + INVENTORY_PATH, HttpMethod.GET, null, new ParameterizedTypeReference<List<OilInventoryDto>>() {
+                inventoryServiceHost + INVENTORY_PATH, HttpMethod.GET, null, new ParameterizedTypeReference<List<OilInventoryDto>>() {
                 }, (Object) oilId
         );
 

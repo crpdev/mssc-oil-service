@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Profile;
  * Project: mssc-oil-eureka
  * Package: com.crpdev.msscoilservice.config
  **/
-@Profile("local-discovery")
+@Profile({"local-discovery", "digitalocean"})
 @EnableDiscoveryClient
 @Configuration
 public class LocalDiscovery {

@@ -15,7 +15,7 @@ import java.util.UUID;
  * Project: mssc-oil-eureka
  * Package: com.crpdev.msscoilservice.service.inventory
  **/
-@FeignClient(name = "oil-inventory-failover")
+@FeignClient(name = "inventory-failover")
 public interface InventoryFailoverFeignClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/inventory-failover")

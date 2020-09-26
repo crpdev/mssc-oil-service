@@ -17,7 +17,7 @@ import java.util.UUID;
  * Project: mssc-oil-eureka
  * Package: com.crpdev.msscoilservice.service.inventory
  **/
-@Profile("local-discovery")
+@Profile({"local-discovery", "digitalocean"})
 @Slf4j
 @Service
 @RequiredArgsConstructor
