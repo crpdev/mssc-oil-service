@@ -53,7 +53,7 @@ services:
     environment:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://crpdev:eurekapass@eureka:8761/eureka/
       SPRING_PROFILES_ACTIVE: local-discovery, localmysql
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://host.docker.internal:9411
       SPRING_ARTEMIS_HOST: jms
       SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/oilinventoryservice?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
@@ -71,7 +71,7 @@ services:
     environment:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://crpdev:eurekapass@eureka:8761/eureka/
       SPRING_PROFILES_ACTIVE: local-discovery
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://host.docker.internal:9411
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
     restart: on-failure
     labels:
@@ -89,7 +89,7 @@ services:
     environment:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://crpdev:eurekapass@eureka:8761/eureka/
       SPRING_PROFILES_ACTIVE: local-discovery, localmysql
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://host.docker.internal:9411
       SPRING_ARTEMIS_HOST: jms
       SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/oilservice?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
@@ -109,7 +109,7 @@ services:
     environment:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://crpdev:eurekapass@eureka:8761/eureka/
       SPRING_PROFILES_ACTIVE: local-discovery, localmysql
-      SPRING_ZIPKIN_BASEURL: http://zipkin
+      SPRING_ZIPKIN_BASEURL: http://host.docker.internal:9411
       SPRING_ARTEMIS_HOST: jms
       SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/oilorderservice?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
       CRP_FACTORY_OIL-SERVICE-HOST: http://oil-service:8080
