@@ -101,7 +101,7 @@ The service can be run in 3 modes
 # Port Configuration
 
 | Service | Port |
-|:--|:--|:--|
+|:--|:--|
 | oil-service | 8080 |
 | inventory | 8082 |
 | order | 8081 |
