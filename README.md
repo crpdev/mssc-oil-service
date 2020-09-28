@@ -100,19 +100,19 @@ The service can be run in 3 modes
 
 # Port Configuration
 
-| Service | Github | Port |
+| Service | Port |
 |:--|:--|:--|
-| oil-service | https://github.com/crpdev/mssc-oil-service | 8080 |
-| inventory | https://github.com/crpdev/mssc-oil-inventory-service | 8082 |
-| order | https://github.com/crpdev/mssc-oil-order-service | 8081 |
-| inventory-failover | https://github.com/crpdev/mssc-oil-inventory-failover | 8083 |
-| eureka | https://github.com/crpdev/mssc-oil-eureka | 8761 |
-| gateway | https://github.com/crpdev/mssc-oil-gateway | 9090 |
-| zipkin | Official Image [openzipkin/zipkin] | 9411 |
-| elastic search | Official Image [elasticsearch:7.9.1] | 9200 |
-| kibana | Official Image [kibana:7.9.1] | 5601 |
-| filebeat | Custom Image [crpdev/filebeat] | |
-| config | https://github.com/crpdev/mssc-oil-factory-config-repo | |
+| oil-service | 8080 |
+| inventory | 8082 |
+| order | 8081 |
+| inventory-failover | 8083 |
+| eureka | 8761 |
+| gateway | 9090 |
+| zipkin | 9411 |
+| elastic search | 9200 |
+| kibana | 5601 |
+| filebeat | |
+| config | |
 
 # Source Code
 
