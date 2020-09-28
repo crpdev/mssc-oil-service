@@ -63,7 +63,7 @@ Implemented as part of the *Circuit Breaker Design Pattern* using Feign: Hystrix
 
 | Endpoint | Description | Method |
 |:--|:--|:--|
-| inventory-failover | Default fallback response when inventory service is unreachable  |
+| inventory-failover | Default fallback response when inventory service is unreachable | GET |
 
 ## Gateway
 
