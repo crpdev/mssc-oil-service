@@ -54,7 +54,7 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: digitalocean
       SPRING_APPLICATION_JSON: '{"eureka":{"client":{"serviceUrl":{"defaultZone":"http://crpdev:eurekapass@167.71.230.115:8761/eureka/"},"region":"default","register-with-eureka":true},"instance":{"preferIpAddress":false,"hostName":"order-service"}},"spring":{"cloud":{"config":{"discovery":{"enabled":true,"serviceId":"factory-config"},"failFast":true,"username":"crpdev","password":"cloudpass"}}},"application":{"name":"order-service"}}'
-      SFG_BREWERY_BEER-SERVICE-HOST: http://oil-service:8080
+      CRP_FACTORY_OIL-SERVICE-HOST: http://oil-service:8080
     labels:
       collect_logs_with_filebeat: "true"
       decode_log_event_to_json_object: "true"

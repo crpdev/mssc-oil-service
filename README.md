@@ -23,11 +23,19 @@ Microservice Services Using Spring Cloud - Oil Service
 - **OS** - macOS Catalina 10.15.7
 - **IDE** - IntelliJ IDEA 2020.2.1 (Ultimate Edition)
 
+# Architecture
+
+![Oil Services Architecture](https://i.ibb.co/z2rMYW4/mssc-oil-ws.jpg)
+
+# Watch Demo
+
+[![Project Showcase: Spring Boot Micro-services](https://i.ibb.co/cTS4WY2/vlcsnap-2020-09-29-07h08m45s824.png)](https://youtu.be/lC-nW6g55z4)
+
 # Services
 
 ## Oil Service
 
-The main exposed service that is exposed to the customer/ client.
+The main service which is exposed to the customer/ client.
 
 Exposed Endpoints:
  
